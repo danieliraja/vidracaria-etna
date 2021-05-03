@@ -1,0 +1,20 @@
+:root{
+    /* formas */
+    --primary-color: #002A66;
+    --secondary-color: #0049B2;
+    --terceary-color: #0366F5;
+
+    /* textos */
+    --primary-text: #0B3778;
+    --secondary-text: #0363ED;
+    --terceary-text: #232323;
+    --grey-text: #C4C4C4;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
