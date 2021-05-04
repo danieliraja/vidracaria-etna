@@ -36,7 +36,8 @@ a {
 
 header {
     min-width: 100%;
-    background-image: url('../img/header.jpg');
+    background: url('../img/header.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 .header-topo {
@@ -61,23 +62,52 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
 }
 
 .header-menu ul {
     display: flex;
-    padding: 10px 20px;
+    position: relative;
     justify-content: space-between;
+    align-items: center;
+    margin-top:28px;
 }
 .header-menu ul li{
     padding: 0 10px;
 }
 .header-menu ul li a{
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     color:var(--primary-color);
     text-transform: uppercase;
+}
+.header-menu ul li a::after{
+    content:'';
+    width: 100%;
+    display: block;    
+    height:4px;
+    margin-top: 25px;
+    border-bottom: 6px solid transparent;
+    transform: scale(0%);
+}
+.header-menu ul li a:hover{    
+    color:var(--secondary-color);
+    transition: 0.4s
+}
+.header-menu ul li a:hover::after{
+    content:'';
+    width: 100%;
+    display: block;
+    height:4px;
+    border-bottom: 6px solid currentColor;
+    animation: menuHover 0.4s ease-in forwards;
+}
+
+@keyframes menuHover{
+    from{
+        width:0%
+    }to{
+        width:100%
+    }
 }
 .header-banner{
     max-width: 40%;
