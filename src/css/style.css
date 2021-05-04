@@ -1,4 +1,4 @@
-:root{
+:root {
     /* formas */
     --primary-color: #002A66;
     --secondary-color: #0049B2;
@@ -9,12 +9,98 @@
     --secondary-text: #0363ED;
     --terceary-text: #232323;
     --grey-text: #C4C4C4;
+    --white-text: #fefefe;
+
+    /* font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif; */
+
+    
 }
-*{
-    margin:0;
+
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-ul{
+body{
+    font-family: 'Poppins', sans-serif;
+}
+ul {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    min-width: 100%;
+    background-image: url('../img/header.jpg');
+}
+
+.header-topo {
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--secondary-color);
+    padding: 12px 0 12px 0;
+}
+.header-topo a{
+    font-size:1rem;
+    color: var(--white-text)
+}
+
+.header-menu {
+    background:var(--secondary-color);
+    background: linear-gradient(to right bottom,
+            rgba(3, 99, 237, 0.2),
+            rgba(229, 229, 229, 0.3));
+    backdrop-filter: blur(0.1rem);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.header-menu ul {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+.header-menu ul li{
+    padding: 0 10px;
+}
+.header-menu ul li a{
+    font-size: 1rem;
+    font-weight: 400;
+    color:var(--primary-color);
+    text-transform: uppercase;
+}
+.header-banner{
+    max-width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+.header-banner h1{
+    font-size:2.4rem;
+    text-transform: uppercase;
+    line-height: 3.2rem;
+    color: var(--secondary-color);
+}
+.header-banner h1::after{
+    content:'';
+    display:block;
+    margin: 0 auto;
+    max-width: 60%;
+    min-height:2px;
+    background-color: #fefefe;
+}
+.header-banner h3{
+    color: var(--secondary-text);
+    font-weight: 200;
 }
