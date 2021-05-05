@@ -28,11 +28,15 @@ body{
 ul {
     list-style: none;
 }
-
+img{
+    max-width: 100%;
+}
 a {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+
+/* conteudo da header */
 
 header {
     min-width: 100%;
@@ -52,7 +56,38 @@ header {
     font-size:1rem;
     color: var(--white-text)
 }
-
+a i{
+    transform: rotate(0deg);
+    transition: 0.4s
+}
+a.header-location:hover{
+    color: #EE675C;
+    transition: 0.4s;
+}
+a.header-location:hover i{
+    transform: rotate(-90deg);
+    transition: 0.4s
+}
+a.header-whatsapp{
+    color: #2C6;
+    margin-right: 18px;
+}
+a.header-whatsapp:hover{
+    color: #1a4;
+    transition: 0.4s
+}
+a.header-whatsapp:hover i{
+    transform: rotate(20deg);
+    transition: 0.4s;
+}
+a.header-ligar:hover{
+    color: var(--grey-text);
+    transition: 0.4s
+}
+a.header-ligar:hover i{
+    transform: rotate(-20deg);
+    transition: 0.4s;
+}
 .header-menu {
     background:var(--secondary-color);
     background: linear-gradient(to right bottom,
@@ -85,8 +120,7 @@ header {
     width: 100%;
     display: block;    
     height:4px;
-    margin-top: 25px;
-    border-bottom: 6px solid transparent;
+    margin-top: 0px;
     transform: scale(0%);
 }
 .header-menu ul li a:hover{    
@@ -94,12 +128,13 @@ header {
     transition: 0.4s
 }
 .header-menu ul li a:hover::after{
-    content:'';
+    content:'❖❖❖';
+    font-size: 1rem;
+    color:var(--white-text);
+    text-align: center;
     width: 100%;
     display: block;
-    height:4px;
-    border-bottom: 6px solid currentColor;
-    animation: menuHover 0.4s ease-in forwards;
+    animation: menuHover 0.5s ease-in forwards;
 }
 
 @keyframes menuHover{
@@ -113,8 +148,8 @@ header {
     max-width: 40%;
     text-align: center;
     margin: 0 auto;
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 .header-banner h1{
     font-size:2.4rem;
@@ -128,9 +163,99 @@ header {
     margin: 0 auto;
     max-width: 60%;
     min-height:2px;
-    background-color: #fefefe;
+    background-color: currentColor;
 }
 .header-banner h3{
     color: var(--secondary-text);
     font-weight: 200;
+    margin-bottom:12px
+}
+.orcamento-button{
+    width: 64px;
+    height: 24px;
+    font-size: 1rem;
+    padding: 10px 58px;
+    background: var(--secondary-color);
+    color: var(--white-text);
+}
+.orcamento-button:hover{
+    background: var(--terceary-color);
+    /* transition: 0.4s; */
+    animation: buttonAnimation 2s ease-in infinite;
+}
+@keyframes buttonAnimation{
+    0% {
+        background: var(--secondary-color)
+    }20% {
+        background: var(--secondary-color);
+    }40% {
+        background: var(--terceary-color);
+    
+    }60% {
+        background: var(--terceary-color);
+    }
+    80% {
+        background: var(--secondary-color)
+    }
+    100% {
+        background: var(--secondary-color)
+    }
+    
+}
+
+/* conteudo do corpo */
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* serviços */
+.servicos {
+    display:flex;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center
+}
+.servicos .titulos{
+    text-align:center;
+    margin-bottom: 24px;
+}
+.servicos .titulos h1{
+    font-size: 2rem;
+}
+.servicos .articles{
+    display: flex;    
+    max-width:100%;    
+}
+.servicos .card-servico{
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    position: relative;
+    padding: 18px;    
+    height:500px;
+    background: url('../img/box-vidro.jpg') no-repeat center center;
+    background-color: #002A66;
+    background-blend-mode: overlay;
+    background-size: cover;
+    color:var(--white-text);
+}
+.servicos .card-titulo{
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;;
+    width:1rem;
+    text-align: center;
+    word-break: break-all;
+    line-height: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+.card-servico:nth-child(3n){
+    background: url('../img/Báscula.jpg') no-repeat center center;
+    background-color: #002A66;
+    background-blend-mode: overlay;
 }
