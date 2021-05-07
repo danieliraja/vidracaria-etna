@@ -3,7 +3,7 @@ Utils = {
         const finalLink = string.replace(/\s/g, '-').trim()
         console.log(finalLink.toLowerCase());
     },
-    setYear() {
+    getYear() {
         let date = new Date();
         date = date.getFullYear();
         let year = document.querySelector(".ano");
@@ -20,4 +20,4 @@ Utils = {
     },
 };
 
-Utils.setYear();
+Utils.getYear();
