@@ -48,7 +48,8 @@ a {
 
 header {
     min-width: 100%;
-    background: url('../img/header.jpg') no-repeat center center;
+    min-height: 60vh;
+    background: url('../img/portas-de-correr.jpeg') no-repeat center center;
     background-size: cover;
 }
 
@@ -249,12 +250,15 @@ a.header-ligar:hover i{
 }
 .servicos .card-servico{
     display: flex;
+    border-left: 5px solid #0363ED;
+    border-bottom: 5px solid #0049B2;
+    /* box-shadow: -5px 5px 0px #0049B2; */
     flex-direction: column;
     margin-left: 18px;
-    min-width: 25%;
+    min-width: 250px;
     position: relative;
     padding: 18px;    
-    height:500px;
+    height:550px;
     background: url('../img/box-vidro.jpg') no-repeat center center;
     background-color: #002A66;
     background-blend-mode: overlay;
@@ -284,7 +288,17 @@ a.header-ligar:hover i{
     background-blend-mode: overlay;
 }
 .card-servico p{
-    margin-top:18px
+    position: absolute;
+    width: 250px;
+    left: 12px;
+    top: 60%
+    
+}
+.card-servico:first-child p{
+    position: absolute;
+    width: 250px;
+    left: 12px;
+    top: 80%    
 }
 .card-servico .card-link{
     display: flex;
@@ -329,12 +343,11 @@ a.header-ligar:hover i{
     max-width: 45%;
     position: relative;
     background-color:var(--grey-text);
-    background-image: url('../img/logo.png');
     background-repeat: no-repeat;
     background-position: right bottom;
     background-blend-mode: luminosity;
     margin: 12px;
-    padding: 32px;
+    padding: 24px;
 }
 .depoimentos-cards .usuario{
     display: flex;
@@ -360,3 +373,21 @@ a.header-ligar:hover i{
     max-width:90%
 }
 
+
+/* rodape */
+.rodape{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--primary-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.rodape-medias{
+    display: flex;
+    flex-direction: row;
+}
+.rodape p{
+    color: var(--white-text);
+}
