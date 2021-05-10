@@ -219,7 +219,21 @@ a.header-ligar:hover i{
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 375px) {
+@media (max-width: 375px) {
+    .header-menu {
+        justify-content:space-between;
+        padding: 4px 12px;
+    }
+    .header-logo img{
+        max-width:70%;  
+    }
+    .header-menu ul{
+        display:none;        
+    }
+    .menu-mobile{
+        font-size:2rem;
+        color:#002A66;
+    }
     .header-banner{
         max-width:100%;
         display:flex;
@@ -252,8 +266,36 @@ a.header-ligar:hover i{
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (max-width: 768px) { 
+    .header-banner{
+        max-width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        padding:80px 12px;
+        text-align: center
+    } 
+    .header-banner h1{
 
+        font-size:2rem;
+        text-align: center;
+    }
+    .header-banner h3{
+        color: var(--secondary-text);
+        font-weight: 200;
+        margin-bottom:12px
+    }
+    a.orcamento-button{
+        display: flex;
+        background:#0049B2;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        width:120px;
+        height: 80px;
+        text-align: center;
+        padding:12px;
+    }
 }
 
 /* conteudo do corpo */
@@ -275,9 +317,10 @@ a.header-ligar:hover i{
 }
 .titulos{
     text-align:center;
-    margin-bottom: 24px;
+    max-width:90%;
+    margin: 24px auto;
 }
-.servicos .titulos h1{
+.titulos h1{
     font-size: 2rem;
 }
 .servicos .articles{
@@ -359,8 +402,29 @@ a.header-ligar:hover i{
     transition: 0.4s
 }
 
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .servicos{
+        max-width:750px
+    }
+    .servicos .articles{
+        max-width: 760px;
+        flex-direction: row;
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .articles .card-servico{
+        display:flex;
+        width: 320px;
+        margin: 18px 10px;
+    }
+    .articles .card-servico p{
+        max-width: 350px;
+    }
+}
+
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 375px) { 
+@media (max-width: 375px) { 
     .servicos { 
         max-width:360px;
     }
@@ -377,24 +441,7 @@ a.header-ligar:hover i{
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    .servicos .articles{
-        max-width: 760px;
-        flex-direction: row;
-        display:flex;
-        flex-wrap: wrap;
-        overflow-x: auto;
-    }
-    .articles .card-servico{
-        display:flex;
-        width: 340px;
-        margin: 18px 10px;
-    }
-    .articles .card-servico p{
-        max-width: 350px;
-    }
-}
+
 
 /* depoimentos  */
 .depoimentos {
@@ -453,16 +500,34 @@ a.header-ligar:hover i{
 .rodape{
     display: flex;
     justify-content:center;
+    color: var(--white-text);
     align-items: center;
     flex-direction: column;
     background: var(--primary-color);
-    padding-top: 24px;
     padding-bottom: 24px;
 }
 .rodape-medias{
     display: flex;
+    background: #0049B2;
+    min-width: 100%;
+    padding:24px 0;
     flex-direction: row;
+    justify-content:center;
+}
+.rodape-blocos{
+    margin: 0 15px;
 }
 .rodape p{
+    max-width:90%;
+    margin: 12px auto;
     color: var(--white-text);
+}
+@media (max-width: 375px) { 
+    .rodape-medias{
+        display: flex;
+        justify-content:center;
+        color: var(--white-text);
+        align-items: center;
+        flex-direction: column;
+}
 }
