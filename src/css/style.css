@@ -218,11 +218,48 @@ a.header-ligar:hover i{
     
 }
 
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 375px) {
+    .header-banner{
+        max-width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        padding:80px 12px;
+        text-align: center
+    } 
+    .header-banner h1{
+
+        font-size:2rem;
+        text-align: center;
+    }
+    .header-banner h3{
+        color: var(--secondary-text);
+        font-weight: 200;
+        margin-bottom:12px
+    }
+    a.orcamento-button{
+        display: flex;
+        background:#0049B2;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        width:120px;
+        height: 80px;
+        text-align: center;
+        padding:12px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+}
+
 /* conteudo do corpo */
 
 .container{
-    max-width: 100%;
-    
+    max-width: 100%;  
 }
 
 /* serviços */
@@ -322,6 +359,42 @@ a.header-ligar:hover i{
     transition: 0.4s
 }
 
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 375px) { 
+    .servicos { 
+        max-width:360px;
+    }
+    .servicos .articles{
+        max-width: 350px;
+        flex-direction: row;
+        display:flex;
+        flex-wrap: wrap;
+        
+    }
+    .articles .card-servico{
+        width:350px;
+        margin: 12px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .servicos .articles{
+        max-width: 760px;
+        flex-direction: row;
+        display:flex;
+        flex-wrap: wrap;
+        overflow-x: auto;
+    }
+    .articles .card-servico{
+        display:flex;
+        width: 340px;
+        margin: 18px 10px;
+    }
+    .articles .card-servico p{
+        max-width: 350px;
+    }
+}
 
 /* depoimentos  */
 .depoimentos {
@@ -341,12 +414,14 @@ a.header-ligar:hover i{
 }
 .depoimentos-cards blockquote{
     max-width: 45%;
+    height: 290px;
     position: relative;
     background-color:var(--grey-text);
     background-repeat: no-repeat;
     background-position: right bottom;
     background-blend-mode: luminosity;
     margin: 12px;
+    overflow-x: auto;
     padding: 24px;
 }
 .depoimentos-cards .usuario{
@@ -369,7 +444,7 @@ a.header-ligar:hover i{
 }
 .depoimentos-cards blockquote p{
     font-size: 0.875rem;
-    margin-top: 12px;
+    margin-top: 18px;
     max-width:90%
 }
 
