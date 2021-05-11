@@ -248,15 +248,15 @@ a.header-ligar:hover i{
         color:#002A66;
     }
     .header-banner{
-        max-width:100%;
+        max-width:90%;
         display:flex;
         flex-direction:column;
+        justify-content: center;
         align-items: center;
         padding:80px 12px;
         text-align: center
     } 
     .header-banner h1{
-
         font-size:2rem;
         text-align: center;
     }
@@ -320,7 +320,7 @@ a.header-ligar:hover i{
 /* serviços */
 .servicos {
     display:flex;
-    max-width: 1024px;
+    max-width: 1100px;
     margin: 0 auto;
     padding-top: 36px;
     padding-bottom: 36px;
@@ -330,7 +330,7 @@ a.header-ligar:hover i{
 }
 .titulos{
     text-align:center;
-    max-width:90%;
+    max-width:50%;
     margin: 24px auto;
 }
 .titulos h1{
@@ -339,7 +339,7 @@ a.header-ligar:hover i{
 .servicos .articles{
     display: flex; 
     justify-content:center;
-    max-width:100%;    
+    flex-wrap: wrap; 
 }
 .servicos .card-servico{
     display: flex;
@@ -347,8 +347,8 @@ a.header-ligar:hover i{
     border-bottom: 5px solid #0049B2;
     /* box-shadow: -5px 5px 0px #0049B2; */
     flex-direction: column;
-    margin-left: 18px;
-    min-width: 250px;
+    margin:12px;
+    width: 250px;
     position: relative;
     padding: 18px;    
     height:550px;
@@ -381,10 +381,8 @@ a.header-ligar:hover i{
     background-blend-mode: overlay;
 }
 .card-servico p{
-    position: absolute;
-    width: 250px;
-    left: 12px;
-    top: 60%
+    width: 200px;
+    padding: 12px 12px;    
     
 }
 .card-servico:first-child p{
@@ -416,7 +414,7 @@ a.header-ligar:hover i{
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
+@media (max-width: 768px){
     .servicos{
         max-width:760px
     }
@@ -520,11 +518,10 @@ a.header-ligar:hover i{
     color: var(--white-text);
     align-items: center;
     flex-direction: column;
-    background: var(--primary-color);
+    background: var(--secondary-text)
 }
 .rodape-medias{
     display: flex;
-    background: #0049B2;
     max-width: 1024px;
     padding:24px 0;
     flex-direction: row;
@@ -549,6 +546,8 @@ a.header-ligar:hover i{
     font-size:1.3rem;
 }
 .rodape-direitos{
+    min-width: 100%;
+    text-align:center;
     background: var(--primary-color);
 }
 .rodape p{
