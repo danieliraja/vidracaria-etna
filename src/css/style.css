@@ -165,8 +165,10 @@ a.header-ligar:hover i{
 }
 .header-banner{
     max-width: 40%;
+    background:rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
     text-align: center;
-    margin: 0 auto;
+    margin: 24px auto;
     padding-top: 80px;
     padding-bottom: 80px;
 }
@@ -330,7 +332,7 @@ a.header-ligar:hover i{
 }
 .titulos{
     text-align:center;
-    max-width:50%;
+    max-width:300px;
     margin: 24px auto;
 }
 .titulos h1{
@@ -545,6 +547,19 @@ a.header-ligar:hover i{
 .rodape-blocos h4{
     font-size:1.3rem;
 }
+.rodape-blocos h4::after{
+    
+        display: block;
+        content: '';
+        margin-top: 2px;
+        margin-bottom: 8px;
+        width: 80px;
+        padding: 2px 2px;
+        height: 10px;
+        border-bottom: 4px solid #fefefe;
+        
+   
+}
 .rodape-direitos{
     min-width: 100%;
     text-align:center;
@@ -568,12 +583,25 @@ a.header-ligar:hover i{
     margin: 0 auto;
     padding: 12px;
     text-align: center;
-    }
+    }    
+
+    .rodape-blocos h4::after{
+    
+        display: block;
+        content: '';
+        margin: 4px auto 8px auto;
+        width: 80px;
+        padding: 2px 2px;
+        height: 10px;
+        border-bottom: 4px solid #fefefe;
+        
+   
+}
     .rodape-blocos ul li a{
     text-align: left;
     color:var(--white-text)
     }
-   
+
     .rodape-blocos p{
     text-align: center
     }
