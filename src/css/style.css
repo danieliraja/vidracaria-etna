@@ -32,6 +32,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
 }
 ul {
     list-style: none;
@@ -59,10 +60,11 @@ header {
     align-items: center;
     justify-content: space-evenly;
     background-color: var(--secondary-color);
-    padding: 12px 0 12px 0;
+    padding: 12px 12px;
 }
 .header-topo a{
     font-size:1rem;
+    margin: 0px 4px;
     color: var(--white-text)
 }
 a i{
@@ -113,7 +115,9 @@ a.header-ligar:hover i{
     justify-content: space-evenly;
     align-items: center;
 }
-
+.menu-mobile{
+    visibility: hidden;
+}
 .header-menu ul {
     display: flex;
     position: relative;
@@ -220,6 +224,14 @@ a.header-ligar:hover i{
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 375px) {
+
+    .header-topo{
+        flex-direction:column;
+    }
+    .header-topo a{
+        font-size:0.875rem
+    }
+    
     .header-menu {
         justify-content:space-between;
         padding: 4px 12px;
@@ -231,6 +243,7 @@ a.header-ligar:hover i{
         display:none;        
     }
     .menu-mobile{
+        visibility: visible;
         font-size:2rem;
         color:#002A66;
     }
@@ -405,7 +418,7 @@ a.header-ligar:hover i{
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
     .servicos{
-        max-width:750px
+        max-width:760px
     }
     .servicos .articles{
         max-width: 760px;
@@ -494,7 +507,11 @@ a.header-ligar:hover i{
     margin-top: 18px;
     max-width:90%
 }
-
+@media (max-width: 375px) { 
+    .depoimentos-cards blockquote{
+        max-width:350px
+    }
+}
 
 /* rodape */
 .rodape{
@@ -504,12 +521,11 @@ a.header-ligar:hover i{
     align-items: center;
     flex-direction: column;
     background: var(--primary-color);
-    padding-bottom: 24px;
 }
 .rodape-medias{
     display: flex;
     background: #0049B2;
-    min-width: 100%;
+    max-width: 1024px;
     padding:24px 0;
     flex-direction: row;
     justify-content:center;
@@ -517,8 +533,27 @@ a.header-ligar:hover i{
 .rodape-blocos{
     margin: 0 15px;
 }
+.rodape-blocos ul li{
+    margin: 2px 2px;
+}
+.rodape-blocos ul li a{
+    
+    text-align: left;
+    color:var(--white-text)
+}
+.rodape-blocos a:hover{
+    color: var(--grey-text);
+    transition: 0.4s
+}
+.rodape-blocos h4{
+    font-size:1.3rem;
+}
+.rodape-direitos{
+    background: var(--primary-color);
+}
 .rodape p{
-    max-width:90%;
+    
+    max-width:100%;
     margin: 12px auto;
     color: var(--white-text);
 }
@@ -529,5 +564,18 @@ a.header-ligar:hover i{
         color: var(--white-text);
         align-items: center;
         flex-direction: column;
-}
+    }
+    .rodape-blocos{
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    }
+    .rodape-blocos ul li a{
+    text-align: left;
+    color:var(--white-text)
+    }
+   
+    .rodape-blocos p{
+    text-align: center
+    }
 }
