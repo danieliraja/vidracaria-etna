@@ -119,46 +119,52 @@ a.header-ligar:hover i{
 }
 .header-menu ul {
     display: flex;
-    position: relative;
     justify-content: space-between;
     align-items: center;
-    margin-top:28px;
 }
 .header-menu ul li{
-    padding: 0 10px;
+    margin-right: 18px;    
 }
 .header-menu ul li a{
-    font-size: 1rem;
-    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;   
+    padding: 12px 12px;
+    box-sizing: border-box;
     color:var(--primary-color);
+}
+.header-menu ul li a:hover{
+    color:var(--secondary-color);
 }
 .header-menu ul li a::after{
     content:'';
-    width: 100%;
-    display: block;    
-    height:4px;
-    margin-top: 0px;
-    transform: scale(0%);
-}
-.header-menu ul li a:hover{    
-    color:var(--secondary-color);
-    transition: 0.4s
-}
-.header-menu ul li a:hover::after{
-    content:'☉';
-    font-size: 1rem;
-    color:var(--primary-color);
-    text-align: center;
-    width: 100%;
     display: block;
-    animation: menuHover 0.5s ease-in forwards;
+    min-width: 50%;
+    margin-bottom: 8px;
+    padding:1px;
+    transform: scale(0);
+    border-top: 2px solid #fefefe;
+    min-height:2px;
+}
+
+.header-menu ul li a:hover::after{
+    content:'';
+    display: block;
+    max-width: 50%;
+    border-top: 2px solid #002A66;
+    min-height:2px;
+    background:currentColor;
+    transform: scale(1);
+    animation: menuHover 0.4s ease-in forwards;
 }
 
 @keyframes menuHover{
     from{
-        width:0%
+        transform: scale(0)
     }to{
-        width:100%
+        transform: scale(1)
     }
 }
 .header-banner{
@@ -224,7 +230,7 @@ a.header-ligar:hover i{
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (max-width: 375px) {
+@media (min-width: 375px) and (max-width: 460px) {
 
     .header-topo{
         flex-direction:column;
@@ -328,6 +334,7 @@ a.header-ligar:hover i{
     flex-direction: column;
 }
 .titulos{
+
     max-width:200px;    
     margin: 24px 18px;
 }
@@ -336,11 +343,16 @@ a.header-ligar:hover i{
     content:'';
     height: 2px;
     margin-top: 12px;
-    border-top: 4px solid;
+    border-top: 4px solid #646464;
 }
 .titulos h1{
-    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
     line-height:2.4rem;
+}
+.titulos p{
+    color: #545454
 }
 .servicos .articles{
     display: flex; 
@@ -463,10 +475,13 @@ a.header-ligar:hover i{
 /* depoimentos  */
 .depoimentos {
     display:flex;
-    max-width: 1024px;
+    max-width: 1100px;
     margin: 0 auto;
     flex-direction: column;
     
+}
+.depoimentos .titulos{
+    align-self: flex-end;
 }
 .feminino{
     color: deeppink;
@@ -484,8 +499,9 @@ a.header-ligar:hover i{
     background-repeat: no-repeat;
     background-position: right bottom;
     background-blend-mode: luminosity;
-    margin: 12px;
-    overflow-x: auto;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    overflow-y: auto;
     padding: 24px;
 }
 .depoimentos-cards .usuario{
@@ -511,7 +527,7 @@ a.header-ligar:hover i{
     margin-top: 18px;
     max-width:90%
 }
-@media (max-width: 375px) { 
+@media (min-width: 250px) and (max-width:460px) { 
     .depoimentos-cards blockquote{
         max-width:350px
     }
@@ -575,7 +591,7 @@ a.header-ligar:hover i{
     margin: 12px auto;
     color: var(--white-text);
 }
-@media (max-width: 375px) { 
+@media (min-width: 250px) and (max-width:460px){ 
     .rodape-medias{
         display: flex;
         justify-content:center;
@@ -599,7 +615,6 @@ a.header-ligar:hover i{
         height: 10px;
         border-bottom: 4px solid #fefefe;
         
-   
 }
     .rodape-blocos ul li a{
     text-align: left;
