@@ -505,6 +505,18 @@ a.header-ligar:hover i{
     max-width:350px;
     height: 25vh
 }
+@media (min-width: 375px) and (max-width: 460px) {
+    .pagamento{
+        max-width:350px;
+        flex-direction: column;
+    }
+    .pagamento h1{
+        font-size: 2rem;
+        line-height: 2.8rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
 
 /* Pagina Produtos  */
 
