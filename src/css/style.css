@@ -52,7 +52,7 @@ header.home {
     min-width: 100%;
     padding-bottom: 24px;
     min-height: 60vh;
-    background: url('../img/header.jpg') no-repeat center center;
+    background: url('../img/karen-uppal-TLjNPAz6d4g-unsplash.jpg') no-repeat center center;
     background-size: cover;
     z-index: 99;
 }
@@ -497,13 +497,27 @@ a.header-ligar:hover i{
     padding-bottom: 36px;
 }
 .pagamento h1{
-    font-size:3.8rem;
+    font-size:3.5rem;
+    text-transform:uppercase;
     line-height:4rem;
     max-width:450px;
 }
-.pagamento .form-pagamento svg{
+.pagamento .forma-pagamento svg{
     max-width:350px;
     height: 25vh
+}
+/* .pagamento .forma-pagamento svg path{
+    animation: pathAnimation 1.7s ease-in forwards;
+} */
+.pagamento .forma-pagamento.active svg path {
+    animation: pathAnimation 1.7s ease-in infinite;
+}
+@keyframes pathAnimation {
+    from{
+        fill: #dedede
+    }to{
+        fill: var(--secondary-color)
+    }
 }
 @media (min-width: 375px) and (max-width: 460px) {
     .pagamento{
@@ -531,13 +545,35 @@ header.produto-header{
     flex-direction: column;
     margin: 0 auto;
 }
+.produtos-navegacao ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.produtos-navegacao ul li{
+    background:var(--terceary-text);
+    margin-right: 18px;
+}
+.produtos-navegacao ul li a{
+    color: var(--white-text);
+    display:block;
+    padding: 48px 48px;
+    font-size: 2rem;
+}
+.produtos-navegacao ul li a:hover{
+    color: var(--secondary-text);
+    transition: 0.4s
+}
 .produtos-conteudo{
-    display: flex;  
+    display: flex;
+    flex-direction: column; 
     padding: 12px 12px;  
 }
 .produto-img{
     max-width:15%
 }
+
+
 /* depoimentos  */
 .depoimentos {
     display:flex;

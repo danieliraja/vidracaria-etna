@@ -1,3 +1,14 @@
+Animation = {
+    animateSVG(){
+        const svgPath = document.querySelector('.rodape');
+        const windowHeight = svgPath.scrollHeight;
+        svgPath.style.height = windowHeight;
+        console.log(windowHeight)
+        
+    }
+}
+
+
 Utils = {
     linkCreator(string){
         const finalLink = string.replace(/\s/g, '-').trim()
@@ -21,3 +32,4 @@ Utils = {
 };
 
 Utils.getYear();
+Animation.animateSVG();
