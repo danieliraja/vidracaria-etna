@@ -33,6 +33,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 0.875rem;
+    scroll-behavior: smooth;
 }
 ul {
     list-style: none;
@@ -504,18 +505,21 @@ a.header-ligar:hover i{
 }
 .pagamento .forma-pagamento svg{
     max-width:350px;
-    height: 25vh
+    height: 25vh;
+
 }
 /* .pagamento .forma-pagamento svg path{
     animation: pathAnimation 1.7s ease-in forwards;
 } */
 .pagamento .forma-pagamento.active svg path {
-    animation: pathAnimation 1.7s ease-in infinite;
+    animation: pathAnimation 1.7s ease-in forwards;
 }
 @keyframes pathAnimation {
     from{
+        opacity: 0;
         fill: #dedede
     }to{
+        opacity: 1;
         fill: var(--secondary-color)
     }
 }
@@ -543,35 +547,56 @@ header.produto-header{
     display: flex;
     max-width:1100px;
     flex-direction: column;
+    margin: 36px auto;
+}
+.produtos-titulos{
+    max-width: 350px;
+    margin: 36px auto;
+    text-align: center;
+}
+.produtos-titulos h1{
+    font-size:3rem;
+    line-height: 3.2rem;
+}
+.produto-porta .portas{
+    position: relative;
+    max-width:980px;
     margin: 0 auto;
 }
-.produtos-navegacao ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.produtos-navegacao ul li{
-    background:var(--terceary-text);
-    margin-right: 18px;
-}
-.produtos-navegacao ul li a{
-    color: var(--white-text);
+.portas h2{
+    font-size: 4rem;
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    text-transform: uppercase;
     display:block;
-    padding: 48px 48px;
-    font-size: 2rem;
+    color:#eee;
+    position: absolute;
+    top: 320px;
+    left: 230px;
+    padding:12px 24px;
+    background: rgba(3,99,237,0.4);
+    backdrop-filter: blur(2px);
 }
-.produtos-navegacao ul li a:hover{
-    color: var(--secondary-text);
-    transition: 0.4s
+.separador{
+    width:40%;
+    height: 2px;
+    margin: 48px auto;
+    background:#dedede;
 }
-.produtos-conteudo{
+.portas-descricao{
     display: flex;
-    flex-direction: column; 
-    padding: 12px 12px;  
+    background: var(--terceary-text);    
+}
+.portas-descricao p{
+    max-width: 350px;
+    margin: 64px auto;
+    font-size:1.5rem;
+    color: var(--white-text);   
 }
 .produto-img{
-    max-width:15%
+    max-width:40%
 }
+
 
 
 /* depoimentos  */
@@ -580,6 +605,7 @@ header.produto-header{
     max-width: 1100px;
     margin: 0 auto;
     flex-direction: column;
+    margin-bottom: 36px;
     
 }
 .depoimentos .titulos{
@@ -593,20 +619,32 @@ header.produto-header{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    scroll-behavior: smooth;
 }
 .depoimentos-cards blockquote{
     max-width: 35%;
-    height: 290px;
-    position: relative;
-    background-color:#dedede;
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-blend-mode: luminosity;
-    margin-right: 12px;
-    border-radius:5px;
-    margin-bottom: 12px;
+    height: 360px;
+    position: relative;   
+    margin-right: 36px;
+    margin-bottom: 36px;
     overflow-y: auto;
-    padding: 24px;
+    border-left: 5px solid #002A66;
+    border-bottom: 5px solid #002A66;
+    box-shadow: -5px 5px #0366F5, -10px 10px #9BD8EA;
+    padding: 24px 18px;
+}
+.depoimentos-cards blockquote p{
+    text-align:justify;
+    margin: 0 auto;
+}
+
+
+blockquote::-webkit-scrollbar{
+    width: 4px;
+
+}
+blockquote::-webkit-scrollbar-thumb {
+    background: #dedede;
 }
 .depoimentos-cards .usuario{
     display: flex;
@@ -633,8 +671,11 @@ header.produto-header{
 }
 @media (min-width: 250px) and (max-width:460px) { 
     .depoimentos-cards blockquote{
-        max-width:350px
+        max-width:350px;
+        margin: 18px auto;
+
     }
+    
 }
 
 /* rodape */

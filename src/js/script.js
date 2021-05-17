@@ -1,10 +1,14 @@
 Animation = {
     animateSVG(){
-        const svgPath = document.querySelector('.rodape');
-        const windowHeight = svgPath.scrollHeight;
-        svgPath.style.height = windowHeight;
-        console.log(windowHeight)
-        
+
+        const animate =  (svg) => {
+            const svgPath = document.querySelector('.forma-pagamento');            
+            if(window.scrollY > svgPath.getBoundingClientRect().top){
+                svgPath.classList.add('active')
+            }            
+        }
+        window.addEventListener('scroll', animate);
+
     }
 }
 
