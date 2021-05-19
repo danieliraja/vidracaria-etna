@@ -556,25 +556,25 @@ a.header-ligar:hover i{
     }
 }
 
-/* Pagina Produtos  */
+/* Pagina projetos  */
 
 header.produto-header{
     background: var(--secondary-color);
-    padding-bottom: 16px;
+    padding-bottom: 8px;
 
 }
-.produtos{
+.projetos{
     display: flex;
     max-width:1100px;
     flex-direction: column;
     margin: 36px auto;
 }
-.produtos-titulos{
+.projetos-titulos{
     max-width: 350px;
     margin: 36px auto;
     text-align: center;
 }
-.produtos-titulos h1{
+.projetos-titulos h1{
     font-size:3rem;
     line-height: 3.2rem;
 }
@@ -584,23 +584,36 @@ header.produto-header{
     max-width:1100px;
     margin: 0 auto;
 }
-.produtos-conteudo{
-    border: 6px solid #002A66;
-}
+
 .portas h2{
     font-size: 4rem;
     font-family: 'Playfair Display';
+    max-width: 70px;
+    word-break: break-all;
     font-weight: 900;
+    text-align: center;
     text-transform: uppercase;
     display:block;
     z-index:99;
     color:#eee;
     position: absolute;
-    top: -20px;
+    top: 0px;
     left: 20px;
-    padding:12px 24px;
-    background: rgba(3,99,237,0.6);
-    backdrop-filter: blur(2px);
+    padding:7px 8px;
+    background: rgba(3,99,237,0.8);
+    backdrop-filter: blur(5px);
+}
+.produto-descricao{
+    align-self: center;
+    max-width: 60%;
+    height: 60vh;
+    margin: 12px auto;
+    background: #fefefe;
+    padding:48px 48px;
+    border-radius: 5px;
+}
+.produto-descricao h3{
+    font-size:1.8rem;
 }
 .separador{
     width:40%;
@@ -608,41 +621,16 @@ header.produto-header{
     margin: 48px auto;
     background:#dedede;
 }
-.portas-descricao{
+.produto-item{
     display: flex;
-    flex-wrap: wrap;
-    background: var(--primary-color)   
+    background: #dedede   
 }
-.portas-descricao p{
-    max-width: 250px;
-    visibility: hidden;
-    font-size: 1rem;
-    background:rgba(3,99,237, 0.3);
-    backdrop-filter: blur(2px);
-    padding: 12px 24px;    
-    color:#fefefe;
-    opacity: 0;
-    position: absolute;
-    top: 80%;
-    z-index: 9999;
-    left:30%
+.produto-item p{
+    font-size: 1.2rem;
 }
 .produto-img{
     position: relative;
-    max-width: 32.6%;
-    margin-right:7px;
-    margin-bottom:7px;
-    cursor: pointer;
-}
-.produto-img:hover img{
-    transform: scale(1.5);
-    position: relative;
-    transition: 0.4s;
-    z-index: 999;
-}
-.produto-img:hover p{
-    visibility: visible;
-    animation: pathAnimation 0.5s ease-in forwards;
+    max-width: 35%;
 }
 
 @media (min-width: 250px) and (max-width:460px) {
@@ -652,8 +640,24 @@ header.produto-header{
     .produto-img{
         max-width:100%;
     }
-    .portas-descricao{
+    .produto-item{
         flex-direction: column;
+    }
+    .produto-descricao h3{
+        font-size:1.8rem;
+        line-height:2rem
+    }
+    .produto-descricao{
+        max-width: 100%;
+        margin: 4px auto;
+        height: 50vh;
+        padding:16px 16px;
+    }
+    .produto-item p{
+        font-size: 1rem;
+    }
+    .separador{
+        margin: 8px auto;
     }
 }
 
