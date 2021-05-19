@@ -645,7 +645,17 @@ header.produto-header{
     position: relative;
     max-width: 35%;
 }
-
+.produto-img img{
+    transform: scale(1);
+    transition: 0.4s
+}
+.produto-img:hover img{
+    cursor: pointer;
+    position: relative;
+    transform: scale(1.290);
+    transition: 0.4s;
+    z-index: 999;
+}
 @media (min-width: 250px) and (max-width:460px) {
     .portas h2{
         font-size:2rem
