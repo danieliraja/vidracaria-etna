@@ -479,7 +479,7 @@ li.sub-menu > ul li a:hover{
     position: relative;
     padding: 18px;
     height: 550px;
-    background: url('../img/box-vidro.jpg') no-repeat center center;
+    background: url('../img/box/box-open-vidro-verde.jpg') no-repeat center center;
     background-color: #002A66;
     background-blend-mode: overlay;
     background-size: cover;
@@ -512,13 +512,13 @@ li.sub-menu > ul li a:hover{
 }
 
 .card-servico:nth-child(3n) {
-    background: url('../img/porta/portas-de-correr.jpeg') no-repeat center center;
+    background: url('../img/porta/porta-4-folhas.jpg') no-repeat center center;
     background-color: #002A66;
     background-blend-mode: overlay;
 }
 
 .card-servico:nth-child(4n) {
-    background: url('../img/box/box-vidro.jpg') no-repeat center center;
+    background: url('../img/box/box-frontal-em-vidro-verde.jpg') no-repeat center center;
     background-color: #002A66;
     background-blend-mode: overlay;
 }
@@ -691,7 +691,7 @@ header.produto-header {
 }
 
 .projetos-titulos h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 3.2rem;
 }
 
