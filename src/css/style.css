@@ -818,6 +818,7 @@ header.produto-header {
 .sobre-img img{
     border-left: 8px solid #06A4EA;
 }
+
 .sobre-descricao h4{
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
@@ -867,6 +868,20 @@ header.produto-header {
         font-size: 1rem;
     }
 
+    .sobre-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .sobre-img img:last-child{
+        display:none;
+    }
+    .sobre-descricao{                
+        display: flex;
+        flex-direction: column;
+        max-width:100%;
+        margin-left: 0px;
+        padding: 16px 4px;
+    }
     .separador {
         margin: 16px auto;
     }
