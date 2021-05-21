@@ -126,6 +126,7 @@ a.header-ligar:hover i {
 .header-menu {
     background: #FFFFFF;
     display: flex;
+    position: relative;
     padding: 0.4rem 1rem;
     justify-content: space-between;
     align-items: center;
