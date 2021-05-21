@@ -261,7 +261,7 @@ li.sub-menu > ul li a:hover{
     height: 24px;
     font-size: 1rem;
     padding: 10px 58px;
-    background: var(--secondary-color);
+    background: #1a4;
     color: var(--white-text);
 }
 
@@ -273,28 +273,28 @@ li.sub-menu > ul li a:hover{
 
 @keyframes buttonAnimation {
     0% {
-        background: var(--secondary-color)
+        background: #1a4
     }
 
     20% {
-        background: var(--secondary-color);
+        background: #1a6;
     }
 
     40% {
-        background: var(--terceary-color);
+        background: #1a7
 
     }
 
     60% {
-        background: var(--terceary-color);
+        background: #1a7;
     }
 
     80% {
-        background: var(--secondary-color)
+        background: #1a6
     }
 
     100% {
-        background: var(--secondary-color)
+        background: #1a4
     }
 
 }
@@ -374,7 +374,7 @@ li.sub-menu > ul li a:hover{
 
     a.orcamento-button {
         display: flex;
-        background: #0049B2;
+        background: #1a4;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -410,14 +410,14 @@ li.sub-menu > ul li a:hover{
 
     a.orcamento-button {
         display: flex;
-        background: #0049B2;
+        background: #1a4;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 120px;
-        height: 80px;
+        width: 190px;
+        height: 48px;
         text-align: center;
-        padding: 12px;
+        padding: 2px 8px;
     }
 }
 
@@ -649,20 +649,28 @@ li.sub-menu > ul li a:hover{
     }
 }
 
-@media (min-width: 250) and (max-width: 460px) {
+@media (min-width: 250px) and (max-width: 460px) {
     .pagamento {
-        max-width: 350px;
+        display: flex;
+        max-width:100%;
         flex-direction: column;
+    
     }
 
     .pagamento h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
+        margin-left: 18px;
+        margin-right: 18px;
         line-height: 2.8rem;
         text-align: center;
-        margin-bottom: 2rem;
     }
 }
-
+@media (min-width:760px){
+    .pagamento {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
 /* Pagina projetos  */
 
 header.produto-header {
@@ -806,8 +814,10 @@ header.produto-header {
     .produto-descricao {
         max-width: 100%;
         margin: 4px auto;
-        height: 50vh;
-        padding: 16px 16px;
+        height: 60vh;
+        padding: 24px 36px;
+        border: none;
+        box-shadow: none;
     }
 
     .produto-item p {
@@ -815,7 +825,7 @@ header.produto-header {
     }
 
     .separador {
-        margin: 8px auto;
+        margin: 16px auto;
     }
 }
 
@@ -905,6 +915,8 @@ blockquote::-webkit-scrollbar-thumb {
     .depoimentos-cards blockquote {
         max-width: 350px;
         margin: 18px auto;
+        border: none;
+        box-shadow: -2px 2px 9px rgba(0,0,0,0.05);
 
     }
 
