@@ -134,6 +134,9 @@ a.header-ligar:hover i {
 
 .menu-mobile {
     visibility: hidden;
+    width: 0px;
+    position: absolute;
+    height: 0px;
 }
 
 .header-menu ul {
@@ -733,14 +736,14 @@ header.produto-header {
 .produto-descricao {
     align-self: center;
     max-width: 60%;
-    height: 60vh;
+    height: 45vh;
     margin: 12px auto;
     background: #fefefe;
-    padding: 64px 48px;
+    padding: 64px 46px;
     border-left: 5px solid #002A66;
     border-bottom: 5px solid #002A66;
     box-shadow: -5px 5px #0366F5, -10px 10px #9BD8EA;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .produto-descricao h3 {
@@ -771,7 +774,7 @@ header.produto-header {
 }
 
 .produto-item p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 8px;
     color: #333
 }
@@ -783,6 +786,7 @@ header.produto-header {
 
 .produto-img img {
     transform: scale(1);
+    display: block;
     transition: 0.4s
 }
 
@@ -792,6 +796,44 @@ header.produto-header {
     transform: scale(1.290);
     transition: 0.4s;
     z-index: 999;
+}
+
+.sobre {
+    display: flex;
+    max-width: 1100px;
+    flex-direction: column;
+    margin: 36px auto;
+    padding: 24px 36px;
+}
+.sobre-section{
+    display: flex;
+    flex-direction: row;
+}
+.sobre-descricao{
+    max-width: 50%;
+    background: #f7f7f7;
+    padding: 24px 12px;
+    margin-left: 36px;
+}
+.sobre-img img{
+    border-left: 8px solid #06A4EA;
+}
+.sobre-descricao h4{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #002A66;
+    font-weight: 700;
+    line-height: 2rem;
+    max-width: 90%;
+    margin: 0px auto;
+}
+.sobre-descricao > p{
+    display:block;
+    font-size: 1rem;
+    padding: 8px 24px;
+}
+.sobre-descricao > p span{
+    color: #0049B2
 }
 
 @media (min-width: 250px) and (max-width:460px) {
