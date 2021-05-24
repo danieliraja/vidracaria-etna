@@ -980,6 +980,16 @@ blockquote::-webkit-scrollbar-thumb {
 
 }
 
+/* contato pagina */
+
+.map{
+    display: flex;
+    height: 600px;
+    background: #eee;
+    padding: 12px 12px;
+
+}
+
 /* rodape */
 .rodape {
     display: flex;
