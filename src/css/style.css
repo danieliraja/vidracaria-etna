@@ -982,13 +982,62 @@ blockquote::-webkit-scrollbar-thumb {
 
 /* contato pagina */
 
-.map{
+.contato-section{
     display: flex;
-    height: 600px;
+    max-width:1100px;
+    margin: 36px auto;
     background: #eee;
-    padding: 12px 12px;
+}
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    margin: 12px;    
+    padding: 24px 12px;
+    
+}
+.contato-info h3{
+    font-size: 1.5rem;
+    color: var(--primary-color);    
+    margin-bottom: 24px;
+}
+.contato-info h3::after{
+    content: '';
+    max-width:10%;
+    display: block;
+    height: 3px;
+    background: var(--primary-color)
+}
+.contato-info p{
+    max-width: 380px;
+    font-size:1rem; 
+    line-height:1.8rem;  
+    color: #646464
+}
+.contato-info a{
+    font-size:1rem;
+    color: #646464
+}
+.contato-info a:hover{
+    color:var(--secondary-color);
+    transition: 0.4s
+}
+.contato-info p strong{
+    margin: 2px;
+    color: #232323;
+}
+
+@media (min-width: 250px) and (max-width:460px) {
+    .contato-section{
+        max-width: 350px;
+        flex-direction: column
+    }
+    .contato-section iframe{
+        max-width:350px
+    }
 
 }
+
 
 /* rodape */
 .rodape {
