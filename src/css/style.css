@@ -339,14 +339,17 @@ li.sub-menu > ul li a:hover{
     }
 
     .header-menu ul {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: absolute;
         background: #002A66;
         padding: 12px;
         top: 100px;
-        right: 0px;
+        left: 0px;
         z-index: 99;
+    }
+    .header-menu ul.active {
+        display: flex;
     }
 
     .header-menu ul li {
@@ -365,7 +368,11 @@ li.sub-menu > ul li a:hover{
     }
 
     .menu-mobile {
+        display: flex;
         visibility: visible;
+        position: relative;
+        width: auto;
+        height: auto;
         font-size: 2rem;
         color: #002A66;
     }
@@ -643,7 +650,7 @@ li.sub-menu > ul li a:hover{
     max-width: 450px;
 }
 
-.pagamento .forma-pagamento svg {
+.pagamento .forma-pagamento img {
     max-width: 350px;
     height: 25vh;
 
@@ -652,19 +659,17 @@ li.sub-menu > ul li a:hover{
 /* .pagamento .forma-pagamento svg path{
     animation: pathAnimation 1.7s ease-in forwards;
 } */
-.pagamento .forma-pagamento.active svg path {
+.pagamento .forma-pagamento.active img {
     animation: pathAnimation 1.7s ease-in forwards;
 }
 
 @keyframes pathAnimation {
     from {
         opacity: 0;
-        fill: #dedede
     }
 
     to {
         opacity: 1;
-        fill: var(--secondary-color)
     }
 }
 
