@@ -165,6 +165,7 @@ li.sub-menu{
 }
 li.sub-menu > ul{
     display: none;
+    transform: scaleY(0);
     background:rgba(3, 99, 237, 0.8);
     backdrop-filter: blur(2px);
     position: absolute;
@@ -175,8 +176,13 @@ li.sub-menu > ul{
     flex-direction: column
 }
 .sub-menu:hover ul{
-    display: flex;    
+    display: flex;
+    transform: scaleY(1);  
     transition: 0.4s;
+}
+.sub-menu-hover{
+    display: flex;
+    flex-direction: row;
 }
 
 li.sub-menu ul li{
@@ -195,8 +201,7 @@ li.sub-menu > ul li a:hover{
 }
 
 .header-menu ul li a {
-    display: flex;
-    flex-direction: column;
+    display: block;
     justify-content: center;
     align-items: center;
     font-size: 1.07rem;
@@ -209,10 +214,15 @@ li.sub-menu > ul li a:hover{
     color: var(--secondary-color);
 }
 
+li.sub-menu:hover .sub-menu-hover i{    
+    transform: rotate(-180deg);
+    transition: 0.5s
+}
+
 .header-menu > ul li a::after {
     content: '';
     display: block;
-    min-width: 50%;
+    max-width: 50%;
     padding: 1px;
     transform: scale(0);
     border-top: 2px solid #fefefe;
@@ -221,6 +231,7 @@ li.sub-menu > ul li a:hover{
 .header-menu ul li a:hover::after {
     content: '';
     display: block;
+    position: relative;
     max-width: 50%;
     border-top: 2px solid;
     min-height: 2px;
