@@ -20,13 +20,13 @@
     <header class="produto-header">
         <nav>
             <div class="header-menu">
-                <a class="header-logo" href="index.html"><img src="src/img/logo.png" alt="logo"></a>
+                <a class="header-logo" href="index.html"><img src="src/img/logo.png" alt=""></a>
                 <ul>
                     <li><a href="index.html">Página Inicial</a></li>
                     <li><a href="a-empresa.html">A Empresa</a></li>
                     <li class="sub-menu">
-                        <a class="sub-menu-hover" href="#">Projetos</a>
-                        <ul>
+                        <a class="sub-menu-hover" href="#">Projetos  <i class="fas fa-caret-down"></i> </a>
+                        <ul class="submenu-items">
                             <li><a href="bascula.html"> Básculas</a></li>
                             <li><a href="box.html"> Boxes</a></li>
                             <li><a href="cortina.html"> Cortinas de Vidro</a></li>
@@ -42,7 +42,7 @@
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
 
-                <a href="#" class="menu-mobile"><i class="fas fa-bars"></i></a>
+                <a href="#" onclick="Menu.toggleMenu()" class="menu-mobile"><i class="fas fa-bars"></i></a>
             </div>
         </nav>
     </header>
