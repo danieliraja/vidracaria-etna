@@ -1089,6 +1089,7 @@ blockquote::-webkit-scrollbar-thumb {
 }
 
 .rodape-blocos {
+    max-width:32%;
     margin: 0 15px;
 }
 
@@ -1146,8 +1147,9 @@ blockquote::-webkit-scrollbar-thumb {
     }
 
     .rodape-blocos {
+        max-width:100%;
         margin: 0 auto;
-        padding: 12px;
+        padding: 12px 12px;
         text-align: center;
     }
 
@@ -1162,9 +1164,8 @@ blockquote::-webkit-scrollbar-thumb {
         border-bottom: 4px solid #fefefe;
 
     }
-
     .rodape-blocos ul li a {
-        text-align: left;
+        text-align: justify;
         color: var(--white-text)
     }
 
